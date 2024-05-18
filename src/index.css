@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Press Start 2P';  /* Name of the font */
+  src: url('/fonts/PressStart2P-Regular.woff');
+}
+
+
+body{
+  min-height: 100vh;
+  font-family: 'Press Start 2P', sans-serif; /* Gaming font */
+  background-color: #1f1f1f; /* Dark background */
+  color: #fff;  /* White text for contrast */
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.title{
+  font-size: 2.5rem;
+  margin: 3rem auto;
+  border: 7px saddlebrown solid;
+  border-radius: 20px;
+  padding:1rem 2rem;
+  text-align: center;
+}
+
+.cards{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+
+.card{
+  width: 90%;
+  max-width:400px;
+  height:max-content;
+  margin:1rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px; /* Subtle shadow */
+  gap: 10px;
+}
+
+.image{
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.game-info{
+  margin:20px 5px;
+  flex: 1;
+}
+
+.game-rating{
+  color:#1faa59; /* Green accent color */
+  font-size:1.1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.game-name{
+  font-size:1.3rem;
+  line-height: 1.6;
+}
+
+.game-details,
+.description{
+  text-align: center;
+}
+
+.description{
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.read-more{
+  color:#12b0e8; /* Blue accent color */
+  cursor: pointer;
+}
+
+.btn-red{
+  margin-top:18px;
+  /* padding: 10px 80px; */
+  width: 85%;
+  height: 2.5rem;
+  border: 1px solid #b4161b; /* Darker red border */
+  cursor: pointer;
+  border-radius:10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #b4161b21; /* Transparent red background */
+}
+
+.btn-red:hover{
+  background-color: red; /* Bright red on hover */
+  color:white;
+  transition: all 0.2s;
+}
+
+.refresh{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-white{
+  margin-top:18px;
+  padding:10px 80px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: white; /* White background */
+  color: black; /* Black text */
+}
+
+.btn-white:hover{
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  transition: all 0.2s;
+}
+
+/* media queries */
+/* media queries */
+@media (max-width: 900px){
+  .title{
+    font-size: 2rem;
+    margin: 3rem 2rem;
+  }
+
+  .cards {
+    max-width: 90%; /* Adjust card container width for smaller screens */
+  }
+}
+
+@media (max-width: 400px){
+  .title{
+    font-size: 1.7rem;
+    padding: 1rem;
+    margin: 2rem 1rem 1rem;
+  }
+
+  .cards {
+    max-width: 70%; /* Adjust card container width for very small screens */
+  }
+
+  .card {
+    max-width: 350px; /* Adjust card width for very small screens */
+  }
+
+  .game-rating,
+  .game-name {
+    font-size: 1.2rem; /* Adjust font sizes for better readability on small screens */
+  }
+}
